@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D FASHIONS BOTIQUE</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Header with logo and name*/
+header {
+  display: flex;
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+header img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin-right: 10px;
+}
+
+/* Navigation*/
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+/* Greeting Marquee */
+marquee {
+  background-color: #ff69b4;
+  color: white;
+  padding:10px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  width: 250px;
+  height: 300px;
+  margin: 10px;
+  border: 2px solid #000;
+}
+
+button {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #128C7E;
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top:30px;
+}
+
+footer a { text-decoration: none; color: white; margin:0 10px; }
+footer img { width: 30px; height: 30px; vertical-align: middle; }
+</style>
+</head>
+
+<body>
+
+<header style="display: flex; align-items: center; justify-content: center;">
+  <a href="logo.jpg" download>
+    <img src="logo.jpg" alt="logo">
+  </a>
+  <div>
+    <h1 style="color: #ff1493; margin: 0;"> D Fashions Botique</h1>
+    <p>Enhance Your Style</p>
+  </div>
+</header>
+
+<marquee>
+Welcome to D Fashions Botique! Explore our latest collections and order easily via WhatsApp!
+</marquee>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">About Us</a>
+  <a href="#">Contact</a>
+</nav>
+
+<!-- NEW FEATURES ADDED (kept simple) -->
+<p style="font-weight:bold;">Time: <span id="clock"></span></p>
+
+<p style="font-size:18px; font-weight:bold;">
+🛒 Cart Items: <span id="cartCount">0</span>
+</p>
+
+<h2>Trending Styles</h2>
+<img id="slide" src="blue_dress.jpg">
+
+<script>
+let images = [
+ "blue_dress.jpg",
+ "jerse.jpg",
+ "classdress.jpg",
+ "pink_fashion.jpg",
+ "red_party.jpg"
+];
+
+let i = 0;
+setInterval(function(){
+ i++;
+ if(i >= images.length){ i = 0; }
+ document.getElementById("slide").src = images[i];
+}, 3000);
+</script>
+<!-- END NEW FEATURES -->
+
+<section>
+<h2> Our Collection</h2>
+
+<a href="blue_dress.jpg" download>
+  <img src="blue_dress.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20blue%20dress" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+
+<a href="jerse.jpg" download>
+  <img src="jerse.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20jerse" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+
+<a href="class_dress.jpg" download>
+  <img src="class_dress.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20class%20dress" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+
+<a href="short.jpg" download>
+  <img src="short.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20short" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+
+<a href="cargo_pants.jpg" download>
+  <img src="cargo_pants.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20cargo%20pants" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+
+<a href="2piece.jpg" download>
+  <img src="2piece.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%202piece" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+
+<a href="pink_fashion.jpg" download>
+  <img src="pink_fashion.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20pink%20fashion" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+
+<a href="red_party.jpg" download>
+  <img src="red_party.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20red%20party" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+
+<a href="fashion.jpg" download>
+  <img src="fashion.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20fashion" target="_blank">
+  <button>Order on WhatsApp</button>
+  </a>
+  <a href="chitengi.jpg" download>
+  <img src="chitengi.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20chitengi" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+<a href="jegging.jpg" download>
+  <img src="jegging.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20jegging" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+<a href="pant.jpg" download>
+  <img src="pant.jpg">
+</a>
+<button onclick="addToCart()">Add to Cart</button>
+<a href="https://wa.me/256727960935?text=Hi!%20I%20want%20to%20buy%20the%20pant" target="_blank">
+  <button>Order on WhatsApp</button>
+</a>
+</section>
+
+<section>
+<h2>About D Fashions Botique</h2>
+<p>
+D Fashions Botique offers trendy and elegant fashion wear for ladies and gents of all ages.<br>
+We provide quality outfits at affordable prices.
+</p>
+</section>
+
+<section style="background:#e8fff0;padding:20px;margin:20px;">
+<h2>💰 Pay via Mobile Money</h2>
+<p><b>Send MoMo to:</b></p>
+<p>📱 <b>+256 727 960 935</b></p>
+<p>Network: <b>MTN MoMo</b></p>
+<button onclick="payNow()">Send Payment Message</button>
+</section>
+
+<section id="owner-upload" style="padding: 20px; background: #f5f5f5; margin: 20px;">
+<h2>Yet to come stock (Owner upload)</h2>
+
+<form onsubmit="sendOwnerToWhatsApp(event)">
+  <input type="text" id="clothName" placeholder="Cloth name" required><br><br>
+  <input type="number" id="clothPrice" placeholder="price" required><br><br>
+  <button type="submit">Send</button>
+</form>
+
+<p id="ownerMessage" style="color: green;"></p>
+</section>
+
+<script>
+// Live clock
+setInterval(function(){
+ document.getElementById("clock").textContent =
+ new Date().toLocaleTimeString();
+},1000);
+
+// Cart counter
+let count = 0;
+function addToCart(){
+ count++;
+ document.getElementById("cartCount").textContent = count;
+}
+
+// Owner upload to WhatsApp
+function sendOwnerToWhatsApp(event){
+ event.preventDefault();
+
+ const name = document.getElementById("clothName").value;
+ const price = document.getElementById("clothPrice").value;
+
+ const message =
+ "NEW CLOTH UPLOAD\n"+
+ "Name: "+name+"\n"+
+ "Price: "+price+"\n\n"+
+ "Please attach the image in WhatsApp.";
+
+ document.getElementById("ownerMessage").textContent =
+ "WhatsApp is opening. Please attach your image there.";
+
+ const url =
+ "https://wa.me/256727960935?text="+encodeURIComponent(message);
+
+ window.open(url,"_blank");
+}
+
+// Payment message
+function payNow(){
+ const message =
+ "Hello, I want to pay for my order via Mobile Money.";
+ window.open(
+ "https://wa.me/256727960935?text="+encodeURIComponent(message),
+ "_blank"
+ );
+}
+</script>
+
+<div style="overflow:hidden; background-color:#fff0f5; color:black; font-weight:bold;">
+<div style="display:inline-block; white-space:nowrap; animation:scrollText 30s linear infinite;">
+THANK YOU AND GOODBYE OUR DEAR CUSTOMERS WE ARE LOCATED IN MUKONO NEAR ALI PHONE SERVICE CENTRE ALONG MUKONO ROAD.
+</div>
+</div>
+
+<style>
+@keyframes scrollText {
+ 0% {transform: translateX(100%); }
+ 100% { transform: translateX(-100%); }
+}
+</style>
+
+<footer>
+<h3 style="color:#ff1493;">Contact Us</h3>
+
+<p>
+Phone:
+<a href="tel:+256703906280">+256703906280</a> |
+<a href="tel:+256758263092">+256758263092</a> |
+<a href="tel:+256727960935">+256727960935</a>
+</p>
+
+<p>Email: <a href="mailto:dfashions@gmail.com">dfashions@gmail.com</a></p>
+
+<p>
+WhatsApp:
+<img src="whatsapp.png" alt="WhatsApp">
+<a href="https://wa.me/256727960935?text=Hello%20I%20want%20to%20order" target="_blank">
+Chat Now🤳
+</a>
+</p>
+
+<p>Location: Mukono, Nabuti</p>
+
+<p>
+Save our contact:
+<a href="dfashions.vcf" download>vCard</a>
+</p>
+
+<p>
+<a href="https://twitter.com/DFashionsBoutique" target="_blank">
+<img src="x.jpg" alt="X/Twitter">
+</a>
+
+<a href="https://instagram.com/DFashionsBoutique" target="_blank">
+<img src="insta.jpg" alt="Instagram">
+</a>
+
+<a href="https://tiktok.com/@DFashionsBoutique" target="_blank">
+<img src="tiktok.jpg" alt="Tik Tok">
+</a>
+</p>
+
+<p>
+<img src="mx_logo.png" alt="MX built"> © 2026 D Fashion Botique
+</p>
+</footer>
+
+</body>
+</html>
